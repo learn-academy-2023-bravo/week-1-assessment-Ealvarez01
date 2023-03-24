@@ -41,13 +41,12 @@ console.log(longestString(fruit3, fruit4))
 
 // --------------------1) Create a function that takes in a number and determines if the given number is below boiling point, at boiling point, or above boiling point. Boiling point is 212 degrees Fahrenheit. Use the test variables provided below.
 
-// Pseudo code:
-
-// input: 3 conditional statements
-// output: 3 temperatures either below, at, or above boiling point
-// create functions that takes a number to be evaluated
-// determine which temperature number is below, at, or above the boiling point of 212 degrees
-// return number degree to less than, more than or equal to the boiling point
+// Pseudo Code:
+// Create a function named "givenNumber" that takes in a number named "temp" to see if the given number is below boiling point, at boiling point, or above boiling point
+// Boiling point is given number of "212" degrees Fahrenheit
+// If the temp is less than boiling point, will return "below boiling point"
+// If the temp is above boiling point, will return "above boiling point"
+// If the temp is at boiling point, will return at boiling point
 
 const temperature1 = 42
 // Expected output: "42 is below boiling point"
@@ -57,17 +56,16 @@ const temperature2 = 350
 
 const temperature3 = 212
 // Expected output: "212 is at boiling point"
-
-let  givenNum = (temperature1) => {
-  if(temperature1 <= 212) {
-    return `"${temperature1} is below boiling point"`
+const givenNum = (temp) => {
+  if(temp < 212) {
+    return `"${temp} is below boiling point"`
   } 
-    else if(temperature2 >= 212) {
-    return `"${temperature2} is above boiling point"`
-  } 
-    else if(temperature3 === 212) {
-    return `"${temperature3} is at boiling point"`
-  } 
+    else if(temp > 212) {
+    return `"${temp} is above boiling point"`
+  }
+    else if(temp = 212) {
+    return `"${temp} is at boiling point"`
+  }  
     else {
     return "something is wrong"
   }
@@ -75,24 +73,20 @@ let  givenNum = (temperature1) => {
 console.log(givenNum(temperature1))
 console.log(givenNum(temperature2))
 console.log(givenNum(temperature3))
-//I AM STUCK HERE-----I can't get temp3 to log at boiling point
 
 
 // --------------------2) Create the code that will combine the two arrays and return the length using the test variables provided below.
 
 // Pseudo code:
-
 // input: combine two arrays
 // output: arrays are added together to equal length
-// create a parameter that takes two arrays of data types
-// combine length of arrays
-// return the combined length
+// Create a variable with a parameter that takes in two arrays of data types and combine length of arrays by using .concat method
+// return one combined arrays length
 
 const padres1984WorldSeriesRuns = [2, 5, 2, 2, 4]
 const padres1998WorldSeriesRuns = [6, 3, 5, 3]
 // Expected output: 9
 
-const combinedRuns = [padres1984WorldSeriesRuns.concat(padres1998WorldSeriesRuns)]
   let combinedArrays = padres1984WorldSeriesRuns.concat(padres1998WorldSeriesRuns)
 
 console.log(combinedArrays.length)
@@ -104,14 +98,16 @@ console.log(combinedArrays.length)
 
 // input: 1 string changed into an array
 // output: 1 array reversed letters
-// create a string and change it into an array to reverse the letters
-// Use three built-in methods
+// Create a function that will reverse the letters of a string
+// Use .split("") built-in method with parentheses and quotations together so that it will separate each of characters and numbers in the string
+// Use .reverse(" ") built-in method with parentheses and a space between the quotations so that it will reverse each character and number in the string
+// Use . join()
 // returns the letters and numbers joined and reversed 
 
 const currentCohort = "Bravo 2023"
 // Expected output: "3202 ovarB"
 
-console.log(currentCohort.split("").reverse(" ").join(""))
+console.log(currentCohort.split("").reverse("").join(""))
 
 
 // --------------------4) Create the code that will return the last index of the given value from the array using the test variables provided below.
